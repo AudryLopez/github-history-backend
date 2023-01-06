@@ -13,6 +13,7 @@ export class setHeader implements NestMiddleware {
       'Access-Control-Allow-Headers',
       'X-Requested-With,content-type',
     );
+    res.setHeader('Accept-Encoding', 'gzip,deflate,compress' );
     next();
   }
 }
